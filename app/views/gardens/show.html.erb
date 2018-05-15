@@ -2,7 +2,6 @@
   <h1><%= @garden.name %></h1>
 </div>
 
-
 <div class="container">
   <div class="row">
     <% @garden.plants.each do |plant| %>
@@ -18,16 +17,17 @@
   </div>
 </div>
 
+<br>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
       <h4>Add a plant:</h4>
       <%= simple_form_for [ @garden, @plant ] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :image_url %>
+        <%= f.input :name, placeholder: "Palm tree" %>
+        <%= f.input :image_url, placeholder: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/philo.jpg" %>
         <%= f.submit "Add", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
 </div>
-
