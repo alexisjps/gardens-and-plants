@@ -10,14 +10,12 @@
           <div class="card-description">
             <h2><%= plant.name %></h2>
           </div>
-          <a class="card-link" href="#"></a>
+          <%= link_to "+", plant_path(plant), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-<br>
 
 <div class="container">
   <div class="row">
