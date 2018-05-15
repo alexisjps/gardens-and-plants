@@ -9,6 +9,7 @@
       <%= simple_form_for [ @garden, @plant ] do |f| %>
         <%= f.input :name %>
         <%= f.input :image_url %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
