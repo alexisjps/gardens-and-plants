@@ -2,7 +2,15 @@
   <h1><%= @garden.name %></h1>
 </div>
 
-<%= simple_form_for [ @garden, @plant ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :image_url %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h4>Add a plant:</h4>
+      <%= simple_form_for [ @garden, @plant ] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :image_url %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
