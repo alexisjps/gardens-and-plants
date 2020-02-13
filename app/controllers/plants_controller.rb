@@ -1,20 +1,20 @@
 class PlantsController < ApplicationController
+  # POST   /gardens/:garden_id/plants
   def create
-    @garden = Garden.find(params[:garden_id])
     @plant = Plant.new(plant_params)
+    @garden = Garden.find(params[:garden_id])
     @plant.garden = @garden
     if @plant.save
-      redirect_to garden_path(@garden)
+      redirect_to garden_path(@plant.garden)
     else
-      render "gardens/show"
+      render 'gardens/show' # render 'gardens/show.html.erb'
     end
   end
 
   def destroy
     @plant = Plant.find(params[:id])
-    garden = @plant.garden
     @plant.destroy
-    redirect_to garden_path(garden)
+    redirect_to garden_path(@plant.garden)
   end
 
   private
