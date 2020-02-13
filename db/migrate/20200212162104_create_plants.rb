@@ -1,9 +1,9 @@
-class CreatePlants < ActiveRecord::Migration[5.2]
+class CreatePlants < ActiveRecord::Migration[6.0]
   def change
     create_table :plants do |t|
       t.string :name
-      t.references :garden, foreign_key: true
       t.string :image_url
+      t.references :garden, null: false, foreign_key: true
 
       t.timestamps
     end

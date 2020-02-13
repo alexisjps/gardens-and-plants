@@ -1,5 +1,5 @@
 class Plant < ApplicationRecord
-  belongs_to :garden # adds a presence validation on the garden_id foreign key
+  belongs_to :garden
 
-  validates :name, presence: true
+  validates :name, :image_url, presence: true
 end

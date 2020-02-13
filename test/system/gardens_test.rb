@@ -14,7 +14,7 @@ class GardensTest < ApplicationSystemTestCase
     visit gardens_url
     click_on "New Garden"
 
-    fill_in "Banner Url", with: @garden.banner_url
+    fill_in "Banner url", with: @garden.banner_url
     fill_in "Name", with: @garden.name
     click_on "Create Garden"
 
@@ -26,7 +26,7 @@ class GardensTest < ApplicationSystemTestCase
     visit gardens_url
     click_on "Edit", match: :first
 
-    fill_in "Banner Url", with: @garden.banner_url
+    fill_in "Banner url", with: @garden.banner_url
     fill_in "Name", with: @garden.name
     click_on "Update Garden"
 
