@@ -20,7 +20,9 @@ import 'bootstrap';
 import 'select2/dist/css/select2.css';
 
 import { multipleSelect } from "../components/select";
+import { toggleForm } from "../components/form";
 
 document.addEventListener('turbolinks:load', () => {
   multipleSelect();
+  toggleForm();
 });
