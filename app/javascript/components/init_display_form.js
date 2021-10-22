@@ -1,5 +1,5 @@
-const initToggleForm = () => {
-  const button = document.querySelector('.toggle-form');
+const initDisplayForm = () => {
+  const button = document.querySelector('.display-form');
   const form = document.querySelector('#new_plant');
   button.addEventListener('click', () => {
     form.classList.remove('d-none');
@@ -7,4 +7,4 @@ const initToggleForm = () => {
   });
 }
 
-export { initToggleForm };
+export { initDisplayForm };

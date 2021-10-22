@@ -23,7 +23,7 @@
   </div>
   <div class="row mt-5 justify-content-center">
     <div class="col-4">
-      <button class="btn btn-secondary toggle-form">Add a plant</button>
+      <button class="btn btn-secondary display-form">Add a plant</button>
       <%= simple_form_for [@garden, @plant], html: {class: "d-none"} do |f| %>
         <%= f.input :name, placeholder: "Palm tree" %>
         <%= f.input :image_url, placeholder: "https://some_nice_image_found_on_google.jpg" %>

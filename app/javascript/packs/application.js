@@ -10,7 +10,7 @@ import "channels"
 import 'bootstrap';
 import 'select2/dist/css/select2.css';
 import { initSelect2 } from "../components/init_select2";
-import { initToggleForm } from "../components/init_toggle_form";
+import { initDisplayForm } from "../components/init_display_form";
 
 Rails.start()
 Turbolinks.start()
@@ -18,5 +18,5 @@ ActiveStorage.start()
 
 document.addEventListener('turbolinks:load', () => {
   initSelect2();
-  initToggleForm();
+  initDisplayForm();
 })
