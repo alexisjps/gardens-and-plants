@@ -18,7 +18,7 @@
   <div class="row mt-5 justify-content-center">
     <div class="col-4">
       <h4>Add a plant</h4>
-      <%= simple_form_for [ @garden, @plant ] do |f| %>
+      <%= simple_form_for [@garden, @plant] do |f| %>
         <%= f.input :name, placeholder: "Palm tree" %>
         <%= f.input :image_url, placeholder: "https://some_nice_image_found_on_google.jpg" %>
         <%= f.submit "Add", class: "btn btn-primary" %>
