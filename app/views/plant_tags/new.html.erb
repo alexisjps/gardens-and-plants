@@ -3,7 +3,7 @@
     <div class="col-12 col-md-8">
       <h1>Add new tag for <%= @plant.name %></h1>
 
-      <%= simple_form_for [ @plant, @plant_tag ] do |f| %>
+      <%= simple_form_for [@plant, @plant_tag] do |f| %>
         <%= f.input :tag, collection: Tag.all, input_html: { multiple: true, class: "multiple-select" }, include_hidden: false %>
         <%= f.submit "Add tag", class: 'btn btn-primary' %>
       <% end %>
