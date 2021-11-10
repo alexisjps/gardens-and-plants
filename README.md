@@ -1,24 +1,3 @@
-# README
+Solution of the two-session [Gardens and Plants livecode](https://github.com/lewagon/fullstack-livecodes/blob/bootstrap-5/05-Rails/03-Rails-restaurant-reviews/01_gardens_and_plants.md).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The branch `master` is the solution of the first session livecode and the branch `solution-day-two` is the solution with the tags implemented during the second session livecode.
