@@ -6,13 +6,18 @@ class PlantTagsController < ApplicationController
   end
 
   def create
-    @plant = Plant.find(params[:plant_id])
     @tags = Tag.where(id: params[:plant_tag][:tag])
     @tags.each do |tag|
       plant_tag = PlantTag.new(plant: @plant, tag: tag)
       plant_tag.save
     end
     redirect_to garden_path(@plant.garden)
+  end
+
+  def destroy
+    @plant_tag = PlantTag.find(params[:id])
+    @plant_tag.destroy
+    redirect_to garden_path(@plant_tag.plant.garden)
   end
 
   private
