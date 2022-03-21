@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  garden: one
+  name: MyString
+  image_url: MyString
+
+two:
+  garden: two
+  name: MyString
+  image_url: MyString
