@@ -11,6 +11,12 @@
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= plant.image_url %>')">
           <%= plant.name %>
           <%= link_to "+", plant_path(plant), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "card-remove-link" %>
+          <div class="card-tags">
+            <% plant.tags.each do |tag| %>
+              <span><%= tag.name %></span>
+            <% end %>
+            <%= link_to "+", new_plant_plant_tag_path(plant) %>
+          </div>
         </div>
       </div>
     <% end %>
