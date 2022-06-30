@@ -27,6 +27,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_22_090544) do
     t.index ["tag_id"], name: "index_plant_tags_on_tag_id"
   end
 
+  create_table "plant_tags", force: :cascade do |t|
+    t.integer "plant_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plant_id"], name: "index_plant_tags_on_plant_id"
+    t.index ["tag_id"], name: "index_plant_tags_on_tag_id"
+  end
+
   create_table "plants", force: :cascade do |t|
     t.integer "garden_id", null: false
     t.string "name"
