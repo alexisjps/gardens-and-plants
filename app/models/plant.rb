@@ -4,5 +4,5 @@ class Plant < ApplicationRecord
   has_many :plant_tags, dependent: :destroy
   has_many :tags, through: :plant_tags
 
-  validates :name, presence: true
+  validates :name, :image_url, presence: true
 end
